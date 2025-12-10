@@ -9,7 +9,7 @@
 
     <!-- Navigation -->
        <v-navigation-drawer
-        
+        v-model = "drawer"
       >
         <v-list>
           <v-list-item
@@ -22,9 +22,10 @@
         <v-divider></v-divider>
 
         <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi-folder" title="My Files" value="myfiles"></v-list-item>
-          <v-list-item prepend-icon="mdi-account-multiple" title="Shared with me" value="shared"></v-list-item>
-          <v-list-item prepend-icon="mdi-star" title="Starred" value="starred"></v-list-item>
+          <v-list-item to="/" prepend-icon="mdi-folder" title="Dashboards" value="myfiles"></v-list-item>
+          <v-list-item to="/inventory" prepend-icon="mdi-account-multiple" title="Inventory" value="shared"></v-list-item>
+          <v-list-item to="/category" prepend-icon="mdi-star" title="Category" value="Category"></v-list-item>
+          <v-list-item to="/users" prepend-icon="mdi mdi-account" title="Users" value="Category"></v-list-item>
         </v-list>
       </v-navigation-drawer>
 
@@ -36,7 +37,7 @@
     <!-- AppBar -->
         <v-app-bar :elevation="2">
   <template v-slot:prepend>
-    <v-app-bar-nav-icon></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon @click.stop="drawer =! drawer"></v-app-bar-nav-icon>
   </template>
 
   <v-app-bar-title>Application Bar</v-app-bar-title>
@@ -54,7 +55,8 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
+const drawer= ref(true)
 
 </script>
 
