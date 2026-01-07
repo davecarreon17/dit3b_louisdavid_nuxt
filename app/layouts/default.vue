@@ -2,11 +2,6 @@
   <div>
     <v-app>
 
-
-
-
-      
-
     <!-- Navigation -->
        <v-navigation-drawer
         v-model = "drawer"
@@ -22,7 +17,7 @@
         <v-divider></v-divider>
 
         <v-list density="compact" nav>
-          <v-list-item to="/" prepend-icon="mdi-folder" title="Dashboards" value="myfiles"></v-list-item>
+          <v-list-item to="/dashboard" prepend-icon="mdi-folder" title="Dashboards" value="myfiles"></v-list-item>
           <v-list-item to="/inventory" prepend-icon="mdi-account-multiple" title="Inventory" value="shared"></v-list-item>
           <v-list-item to="/category" prepend-icon="mdi-star" title="Category" value="Category"></v-list-item>
           <v-list-item to="/users" prepend-icon="mdi mdi-account" title="Users" value="Category"></v-list-item>
